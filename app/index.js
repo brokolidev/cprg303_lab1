@@ -1,17 +1,15 @@
-import { StyleSheet, View, Text } from "react-native";
+import { SafeAreaView, StyleSheet } from "react-native";
 import React from "react";
-import Customtextinput from "../components/customtextinput";
-
+import ToDoList from "../components/todolist";
+import ToDoForm from "../components/todoform";
 
 const Index = () => {
-    return (
-        <View style={{ flex: 1 }}>
-          <Text>Index</Text>
-          <Customtextinput />
-        </View>
-    )
-}
+  return (
+    <SafeAreaView>
+      <ToDoList />
+      <ToDoForm />
+    </SafeAreaView>
+  );
+};
 
 export default Index;
-
-const styles = StyleSheet.create({});
