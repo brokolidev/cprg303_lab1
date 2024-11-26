@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 const ToDoForm = ({ addTask }) => {
 
-  const [taskText, setTaskText] = React.useState('');
+  const [taskText, setTaskText] = useState('');
 
   return (
     <View style={styles.form}>
