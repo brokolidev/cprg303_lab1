@@ -4,7 +4,6 @@ import ToDoList from "../components/todolist";
 import ToDoForm from "../components/todoform";
 import { useState } from "react";
 
-
 const Index = () => {
 
   const [tasks, setTasks] = useState([
@@ -13,10 +12,14 @@ const Index = () => {
     'Walk dog'
   ]);
 
+  const addTask = (taskText) => {
+    setTasks([...tasks, taskText]);
+  };
+
   return (
     <SafeAreaView>
       <ToDoList tasks={tasks} />
-      <ToDoForm />
+      <ToDoForm addTask={addTask} />
     </SafeAreaView>
   );
 };
